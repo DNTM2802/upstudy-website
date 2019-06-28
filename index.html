@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>UPstudy</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom Fonts -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+    rel="stylesheet" type="text/css">
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="css/stylish-portfolio.min.css" rel="stylesheet">
+
+</head>
+<style>
+  .responsive {
+    width: 100%;
+    max-width: 30rem;
+    height: auto;
+  }
+
+  .dropdown-item.active,
+  .dropdown-item:active {
+    background-color: #343a40;
+  }
+
+  .navbar-custom {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .form-label-group {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .form-control:focus,
+  .custom-select:focus {
+    background-color: white;
+    border-color: none;
+    box-shadow: none;
+  }
+
+  h2 {
+    text-align: center;
+    padding: 20px;
+  }
+
+  /* Slider */
+
+  .slick-slide {
+    margin: 0px 20px;
+  }
+
+  .slick-slide img {
+    width: 100%;
+  }
+
+  .slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  .slick-list:focus {
+    outline: none;
+  }
+
+  .slick-list.dragging {
+    cursor: pointer;
+    cursor: hand;
+  }
+
+  .slick-slider .slick-track,
+  .slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  .slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+  }
+
+  .slick-track:before,
+  .slick-track:after {
+    display: table;
+    content: '';
+  }
+
+  .slick-track:after {
+    clear: both;
+  }
+
+  .slick-loading .slick-track {
+    visibility: hidden;
+  }
+
+  .slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+  }
+
+  [dir='rtl'] .slick-slide {
+    float: right;
+  }
+
+  .slick-slide img {
+    display: block;
+  }
+
+  .slick-slide.slick-loading img {
+    display: none;
+  }
+
+  .slick-slide.dragging img {
+    pointer-events: none;
+  }
+
+  .slick-initialized .slick-slide {
+    display: block;
+  }
+
+  .slick-loading .slick-slide {
+    visibility: hidden;
+  }
+
+  .slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+  }
+
+  .slick-arrow.slick-hidden {
+    display: none;
+  }
+
+  .footer-above {
+    background: #222;
+    color: #eee;
+    padding: 60px 0;
+    font-size: 14px;
+    line-height: 30px
+  }
+
+  .footer-above a {
+    display: inline-block;
+    letter-spacing: .5px;
+    line-height: 1.8;
+    color: #ddd !important;
+    text-decoration: none;
+    color: inherit
+  }
+
+  .footer-above a:hover {
+    color: #fff !important
+  }
+
+  .footer-below {
+    background: #111;
+    padding: 10px 0;
+    color: #eee;
+    text-align: center;
+    font-size: 12px
+  }
+</style>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <!-- <a class="menu-toggle rounded" href="#">
+    <i class="fas fa-bars"></i>
+  </a> -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top" style="width: 100%!important">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger active" href="#head" title="UPstudy"><b>UPstudy</b></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#services">SOBRE</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link normal dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+              aria-haspopup="true" aria-expanded="false" title="Serviços Fátima">SERVIÇOS</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#" title="Explicações Individuais">Explicações Individuais</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#" title="Explicações em grupo">Explicações em grupo</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#" title="Acompanhamento Escolar">Acompanhamento Escolar</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#" title="Línguas divertidas">Línguas divertidas</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#" title="Mindfulness">Mindfulness</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#" title="Plataforma Moodle UPstudy!a">Plataforma Moodle UPstudy!</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#" title="Apoio na execução de trabalhos">Apoio na execução de
+                trabalhos</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#" title="Opção transporte">Opção transporte</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#" title="Parcerias e vantagens">Parcerias e vantagens</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger normal" href="#parcerias" title="Parcerias Fátima">PARCERIAS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger normal" href="#contact" title="Contactos Fátima">ENCONTRA-NOS</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead d-flex" id="head">
+    <div class="container text-left my-auto">
+      <img class="responsive" src="img/new_logo2.svg">
+      <h3 class="mb-5 text-white" style="padding-left: 20px">
+        <em>Explicações e acompanhamento em Fátima</em>
+      </h3>
+      <a style="margin-left: 20px" class="btn btn-primary btn-xl js-scroll-trigger" href="#services">Descobre-nos!</a>
+    </div>
+    <div class="overlay"></div>
+  </header>
+
+
+
+  <!-- Services -->
+  <section class="content-section text-white text-center" id="services"
+    style="background-color:#28a745;padding-bottom: 0px">
+    <div class="container">
+      <div class="content-section-heading">
+        <h2 class="mb-5">O que oferecemos?</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+          <span class="service-icon rounded-circle mx-auto mb-3">
+            <i class="fas fa-chalkboard-teacher"></i>
+          </span>
+          <h4>
+            <strong>Explicações individuais ou em grupo</strong>
+          </h4>
+          <p class="text-faded mb-0">Dispomos de salas e professores qualificados de modo a proporcionar as melhores
+            condições de aprendizagem</p>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+          <span class="service-icon rounded-circle mx-auto mb-3">
+            <i class="fas fa-book-open"></i>
+          </span>
+          <h4>
+            <strong>Acompanhamento escolar</strong>
+          </h4>
+          <p class="text-faded mb-0">Acompanhamos o percurso escolar do aluno ajudando na aquisição de hábitos de estudo
+            e promovendo a sua motivação pessoal</p>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-5 mb-md-0">
+          <span class="service-icon rounded-circle mx-auto mb-3">
+            <i class="fas fa-car-side"></i>
+          </span>
+          <h4>
+            <strong>Transporte</strong>
+          </h4>
+          <p class="text-faded mb-0">Transportamos o aluno da escola para o nosso centro de estudos</p>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+          <span class="service-icon rounded-circle mx-auto mb-3">
+            <i class="fas fa-briefcase"></i>
+          </span>
+          <h4>
+            <strong>Apoio na execução de trabalhos</strong>
+          </h4>
+          <p class="text-faded mb-0">Apoiamos na execução de trabalhos escolares, mas também em PAF's e trabalhos de
+            ensino superior</p>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+          <span class="service-icon rounded-circle mx-auto mb-3">
+            <i class="fas fa-wifi"></i>
+          </span>
+          <h4>
+            <strong>Plataforma online de estudo autónomo</strong>
+          </h4>
+          <p class="text-faded mb-0">Dispomos de uma plataforma moodle própria, disponibilizando conteúdos online e
+            mantendo o contacto permanente entre professores e alunos</p>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <span class="service-icon rounded-circle mx-auto mb-3">
+            <i class="fas fa-star"></i>
+          </span>
+          <h4>
+            <strong>Parcerias e vantagens</strong>
+          </h4>
+          <p class="text-faded mb-0">Oferecemos inúmeras vantagens aos nossos clientes graças a um diverso leque de
+            parcerias</p>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-lg-12 col-md-12 mb-5 mb-lg-0" style="margin-top: 70px;margin-bottom:100px!important"><a
+            class="btn btn-primary btn-xl js-scroll-trigger" href="#about">E mais!</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="content-section bg-light" id="galeria" style="padding-bottom: 0">
+    <div class="container text-center">
+      <div class="content-section-heading">
+        <h2 class="mb-5">Galeria</h2>
+      </div>
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="img/slideshow_0.jpg" alt="First slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Um centro de explicações que se destaca</h5>
+            <p>Além das explicações e do acompanhamento do aluno, dastaca-se o esforço diário para o bem estar do aluno
+              e a promoção de plataformas de aprendizagem como o <b>Moodle</b>!</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/slideshow_1.jpg" alt="Second slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Espaço lúdico</h5>
+            <p>Para os tempos livres, um espaço devidamente equipado com PC's, Wi-Fi, TV, pufs, jogos e uma biblioteca
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/slideshow_2.jpg" alt="Third slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Salas individualizadas</h5>
+            <p>Dispomos de salas com equipamento adequado a cada escalão etário para pequenos grupos (até 5 alunos)
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/slideshow_3.jpg" alt="Fourth slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Ambiente favorável à aprendizagem</h5>
+            <p>Mais do que acompanhamento escolar, este espaço pretende apoiar os alunos na vida agitada da sociedade
+              que os envolve e contagia</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/slideshow_4.jpg" alt="Fifth slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Sala de estudo autónomo</h5>
+            <p>Possibilidade de utilização deste espaço fora do horário de acompanhamento</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Parcerias -->
+  <section class="content-section" id="parcerias">
+    <div class="container">
+      <div class="content-section-heading">
+        <h2 class="mb-5">Parcerias e vantagens</h2>
+      </div>
+      <section class="customer-logos slider">
+        <div class="slide"><img data-toggle="modal" data-target="#modal1" style="cursor: pointer"
+            src="img/partner_1.jpg">
+        </div>
+        <div class="slide"><img data-toggle="modal" data-target="#modal2" style="cursor: pointer"
+            src="img/partner_2.jpg"></div>
+        <div class="slide"><img data-toggle="modal" data-target="#modal3" style="cursor: pointer"
+            src="img/partner_3.jpg"></div>
+        <div class="slide"><img data-toggle="modal" data-target="#modal4" style="cursor: pointer"
+            src="img/partner_4.jpg"></div>
+      </section>
+    </div>
+  </section>
+
+  <!-- Modals -->
+  <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Centro Desportivo de Fátima</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          Todos os atletas e filhos de funcionários do Centro Desportivo de Fátima beneficiam de um <b>desconto de
+            10%</b> nas mensalidades do UPstudy! (extensível a irmãos)<br>
+          <img style="width: 200px;width: 200px; margin-top:20px;margin-bottom:20px" src="img/partner_1.jpg"><br>
+          <a class="btn btn-primary btn-xl js-scroll-trigger" target="_blank"
+            href="https://www.facebook.com/cdfatimasad/">Centro
+            Desportivo de Fátima <i class="fas fa-external-link-alt"></i></a>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Vila Fit Fátima</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          Todos os filhos de atletas do Vila Fit Fátima beneficiam de um <b>desconto de
+            10%</b> nas mensalidades do UPstudy!<br>
+          <img style="width: 200px" src="img/partner_2.jpg"><br>
+          <a class="btn btn-primary btn-xl js-scroll-trigger" target="_blank"
+            href="https://www.facebook.com/VilaFitFatima/">Vila Fit Fátima <i class="fas fa-external-link-alt"></i></a>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Tutu Ballet Escola de Dança</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          Todos os dançarinos da Escola de Dança TutuBallet beneficiam de um <b>desconto de
+            10%</b> nas mensalidades do UPstudy! (extensível a irmãos)<br>
+          <img style="width: 200px" src="img/partner_3.jpg"><br>
+          <b>Morada: </b>Estrada Minde N 36 2 Dto. Cova da Iria 2495-408 Fátima
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Clínica Contigo</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          Todos os clientes da Clínica Contigo beneficiam de um <b>desconto de
+            10%</b> nas mensalidades do UPstudy!<br>
+          <img style="width: 200px" src="img/partner_4.jpg"><br>
+          <a class="btn btn-primary btn-xl js-scroll-trigger" target="_blank"
+            href="https://www.clinicacontigo.pt/">Clínica Contigo <i class="fas fa-external-link-alt"></i></a>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio -->
+  <!-- <section class="content-section" id="portfolio">
+    <div class="container">
+      <div class="content-section-heading text-center">
+        <h3 class="text-secondary mb-0">Portfolio</h3>
+        <h2 class="mb-5">Recent Projects</h2>
+      </div>
+      <div class="row no-gutters">
+        <div class="col-lg-6">
+          <a class="portfolio-item" href="#">
+            <span class="caption">
+              <span class="caption-content">
+                <h2>Stationary</h2>
+                <p class="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>
+              </span>
+            </span>
+            <img class="img-fluid" src="img/portfolio-1.jpg" alt="">
+          </a>
+        </div>
+        <div class="col-lg-6">
+          <a class="portfolio-item" href="#">
+            <span class="caption">
+              <span class="caption-content">
+                <h2>Ice Cream</h2>
+                <p class="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>
+              </span>
+            </span>
+            <img class="img-fluid" src="img/portfolio-2.jpg" alt="">
+          </a>
+        </div>
+        <div class="col-lg-6">
+          <a class="portfolio-item" href="#">
+            <span class="caption">
+              <span class="caption-content">
+                <h2>Strawberries</h2>
+                <p class="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>
+              </span>
+            </span>
+            <img class="img-fluid" src="img/portfolio-3.jpg" alt="">
+          </a>
+        </div>
+        <div class="col-lg-6">
+          <a class="portfolio-item" href="#">
+            <span class="caption">
+              <span class="caption-content">
+                <h2>Workspace</h2>
+                <p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
+              </span>
+            </span>
+            <img class="img-fluid" src="img/portfolio-4.jpg" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+
+  <section class="content-section" id="form" style="background-color:#28a745">
+    <div class="container text-center">
+      <div class="card">
+        <div class="content-section-heading">
+          <h2 class="">Reserva de Inscrição</h2>
+          <p>Efetua a tua inscrição para o próximo ano letivo e garante a tua vaga no UPstudy!
+            Também podes utilizar o formulário para pedir informações.</p>
+        </div>
+        <div class="card-body" style="padding-right: 50px;padding-left:50px">
+          <form class="needs-validation" action="https://formspree.io/duarte.ntm28@gmail.com" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="Nova inscrição no UPstudy!" />
+            <div class="form-group required">
+              <label class="control-label sr-only" for="Nome">Nome</label>
+              <input type="text" class="form-control" id="Nome" name="Nome" placeholder="Nome" required />
+            </div>
+            <div class="form-group required">
+              <label class="control-label sr-only" for="Sou...">Sou...</label>
+              <select class="form-control" id="Sou..." name="É" required>
+                <option selected value="">Sou...</option>
+                <option value="Aluno">Aluno</option>
+                <option value="Pai/Mãe de um aluno">Pai/Mãe de um aluno</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="control-label sr-only" for="Localidade">Localidade:</label>
+              <select class="form-control" id="Localidade" name="Localidade" required>
+                <option value="Fátima">Fátima</option>
+              </select>
+            </div>
+            <div class="form-group required">
+              <label class="control-label sr-only" for="nome_aluno">Nome aluno(a):</label>
+              <input type="text" class="form-control" id="nome_aluno" name="Nome aluno" placeholder="Nome aluno(a)"
+                data-rule-required="true" data-msg-required="Este campo é obrigatório." required />
+            </div>
+            <div class="form-group required">
+              <label class="control-label sr-only" for="Email">Email</label>
+              <input type="email" class="form-control" id="Email" name="Email" placeholder="Email" required />
+            </div>
+            <div class="form-group required">
+              <label class="control-label sr-only" for="Telemovel">Telemóvel:</label>
+              <div class="input-group"><span class="input-group-addon left"><i class="glyphicon glyphicon-earphone"></i>
+                </span>
+                <input type="tel" class="form-control phonelib" id="Telemovel" name="Telemovel" placeholder="Telemóvel"
+                  required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label sr-only" for="como_nos_conheceu">Como nos conheceu?</label>
+              <select class="form-control" id="como_nos_conheceu" name="Como nos conheceu" required>
+                <option selected value="">Como nos conheceu?</option>
+                <option value="Anúncio Google">Anúncio Google</option>
+                <option value="Anúncio Facebook/Instagram">Anúncio Facebook/Instagram</option>
+                <option value="Por um amigo">Por um amigo</option>
+                <option value="Internet">Internet</option>
+                <option value="Flyers">Flyers</option>
+                <option value="Não me recordo">Não me recordo</option>
+              </select>
+            </div>
+            <div class="form-group required">
+              <label class="control-label sr-only" for="Ano">Ano de escolaridade</label>
+              <select class="form-control" id="Ano" name="Ano" required>
+                <option value="">Ano de escolaridade</option>
+                <option value="1º ano">1º ano</option>
+                <option value="2º ano">2º ano</option>
+                <option value="3º ano">3º ano</option>
+                <option value="4º ano">4º ano</option>
+                <option value="5º ano">5º ano</option>
+                <option value="6º ano">6º ano</option>
+                <option value="7º ano">7º ano</option>
+                <option value="8º ano">8º ano</option>
+                <option value="9º ano">9º ano</option>
+                <option value="10º ano">10º ano</option>
+                <option value="11º ano">11º ano</option>
+                <option value="12º ano">12º ano</option>
+                <option value="Ensino superior">Ensino superior</option>
+                <option value="Outros">Outros</option>
+              </select>
+            </div>
+            <div class="form-group required">
+              <label class="control-label sr-only" for="Dsiciplinas">Disciplina(s) / Serviço(s)</label>
+              <input type="text" class="form-control" id="Disciplinas" name="Disciplinas"
+                placeholder="Disciplina(s) / Serviço(s)" required />
+            </div>
+            <div class="form-group">
+              <label class="control-label sr-only" for="Obs">Observações</label>
+              <input type="text" class="form-control" id="Obs" name="Observações" placeholder="Observações" />
+            </div>
+            <div class="form-group submit" style="position: relative;">
+              <button type="submit" class="btn btn-primary btn-lg" style="z-index: 1;">
+                Enviar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Map -->
+  <section class="content-section" id="contact" style="padding-bottom: 0px!important">
+    <div class="container">
+      <div class="content-section-heading">
+        <h2 class="mb-5">Encontra-nos</h2>
+      </div>
+    </div>
+    <section class="map">
+      <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+        src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJV9cqIzudGA0RFMCtVXOTSIg&key=AIzaSyAdwjPKr1YfknMXFGEunknnCNeT_GIB8b0"></iframe>
+      <br />
+      <small>
+        <a
+          href="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJV9cqIzudGA0RFMCtVXOTSIg&key=AIzaSyAdwjPKr1YfknMXFGEunknnCNeT_GIB8b0"></a>
+      </small>
+    </section>
+  </section>
+
+
+  <footer>
+    <div class="footer-above">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-5 col-sm-4 mb30">
+            <a class="js-scroll-trigger" href="#head">
+              <img src="img/new_logo2.svg" width="230" alt="Clínica Contigo">
+            </a>
+            <p class="mtop30">
+              <a href="#services" class="mb15 pl5 pr10 js-scroll-trigger">SOBRE</a> ·
+              <a href="#" class="mb15 pl5 pr10 js-scroll-trigger">SERVIÇOS</a> ·
+              <a href="#parcerias" class="mb15 pl5 pr10 js-scroll-trigger">PARCERIAS</a> ·
+              <a href="#contact" class="mb15 pl5 pr10 js-scroll-trigger">CONTACTOS</a>
+            </p>
+          </div>
+          <div class="col-xs-12 col-sm-4 col-md-4  mb30">
+            <h4 class="fsize16 text-uppercase mb20 fw500">Onde Estamos</h4>
+            <span class="fw600">UPstudy - Salas de Estudo</span> <br>
+            Av. D. José Alves Correia da Silva, 202, Ed. Sinai, Piso 1, Loja 4<br>
+            2495-402 Fátima <br>
+            <p class="mtop20"><a
+                href="https://www.google.pt/maps/dir//UPstudy+-+Salas+de+estudo,+Loja+4,+F%C3%A1tima/@39.6273867,-8.7095155,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0xd189d3b232ad757:0x8848937355adc014!2m2!1d-8.674496!2d39.627392!3e0"
+                class="c-white" target="_blank">Obter Direções <i class="fa fa-map-marker" aria-hidden="true"></i></a>
+            </p>
+          </div>
+          <div class="col-xs-12 col-sm-4 col-md-3 mb30">
+            <h4 class="fsize16 text-uppercase mb20 fw500">Como contactar-nos</h4>
+            <i class="fa fa-phone pr10" aria-hidden="true"></i> 918 141 555 <br>
+            <i class="fa fa-phone pr10" aria-hidden="true"></i> 915 069 002 <br>
+            <i class="fa fa-phone pr10" aria-hidden="true"></i> 249 153 481 <br>
+            <a href="mailto:geral@upstudy.pt"><i class="fa fa-envelope pr10" aria-hidden="true"></i>
+              geral@upstudy.pt</a> <br>
+            <a href="https://www.facebook.com/upstudyfatima/" target="_blank"><i class="fa fa-facebook-official pr10 "
+                aria-hidden="true" title="Siga-nos no Facebook"></i> /upstudyfatima</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-below">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            © 2019 - Todos os direitos reservados. UPstudy
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer -->
+  <!-- <footer class="footer text-center">
+    <div class="container">
+      <ul class="list-inline mb-5">
+        <li class="list-inline-item">
+          <a class="social-link rounded-circle text-white mr-3" href="#">
+            <i class="icon-social-facebook"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="social-link rounded-circle text-white mr-3" href="#">
+            <i class="icon-social-instagram"></i>
+          </a>
+        </li>
+      </ul>
+      <script type="text/javascript" src="https://freehitcounters.org/count/26hl"></script><br>
+      <a href='http://www.counter-zaehler.de'>counterservice</a>
+      <script type='text/javascript'
+        src='https://whomania.com/ctr?id=716d98241f98baf3063dcebdb74a509eafe43a99'></script>
+      <p class="text-muted small mb-0">Copyright &copy; UPstudy 2019</p>
+    </div>
+  </footer> -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/stylish-portfolio.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+
+
+
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/additional-methods.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
+
+  <script type="text/javascript">
+    (function () {
+      'use strict';
+      window.addEventListener('load', function () {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function (form) {
+          form.addEventListener('submit', function (event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+    $(document).ready(function () {
+      $('.customer-logos').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 4
+          }
+        }, {
+          breakpoint: 520,
+          settings: {
+            slidesToShow: 3
+          }
+        }]
+      });
+    });
+  </script>
+</body>
+
+</html>
