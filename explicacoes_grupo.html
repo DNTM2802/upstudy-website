@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>UPstudy</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom Fonts -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+    rel="stylesheet" type="text/css">
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="css/stylish-portfolio.min.css" rel="stylesheet">
+
+</head>
+<style>
+  .responsive {
+    width: 100%;
+    max-width: 30rem;
+    height: auto;
+  }
+
+  .dropdown-item.active,
+  .dropdown-item:active {
+    background-color: #343a40;
+  }
+
+  .navbar-custom {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .form-label-group {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .form-control:focus,
+  .custom-select:focus {
+    background-color: white;
+    border-color: none;
+    box-shadow: none;
+  }
+
+  h2 {
+    text-align: center;
+    padding: 20px;
+  }
+
+  /* Slider */
+
+  .slick-slide {
+    margin: 0px 20px;
+  }
+
+  .slick-slide img {
+    width: 100%;
+  }
+
+  .slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  .slick-list:focus {
+    outline: none;
+  }
+
+  .slick-list.dragging {
+    cursor: pointer;
+    cursor: hand;
+  }
+
+  .slick-slider .slick-track,
+  .slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  .slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+  }
+
+  .slick-track:before,
+  .slick-track:after {
+    display: table;
+    content: '';
+  }
+
+  .slick-track:after {
+    clear: both;
+  }
+
+  .slick-loading .slick-track {
+    visibility: hidden;
+  }
+
+  .slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+  }
+
+  [dir='rtl'] .slick-slide {
+    float: right;
+  }
+
+  .slick-slide img {
+    display: block;
+  }
+
+  .slick-slide.slick-loading img {
+    display: none;
+  }
+
+  .slick-slide.dragging img {
+    pointer-events: none;
+  }
+
+  .slick-initialized .slick-slide {
+    display: block;
+  }
+
+  .slick-loading .slick-slide {
+    visibility: hidden;
+  }
+
+  .slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+  }
+
+  .slick-arrow.slick-hidden {
+    display: none;
+  }
+
+  .footer-above {
+    background: #222;
+    color: #eee;
+    padding: 60px 0;
+    font-size: 14px;
+    line-height: 30px
+  }
+
+  .footer-above a {
+    display: inline-block;
+    letter-spacing: .5px;
+    line-height: 1.8;
+    color: #ddd !important;
+    text-decoration: none;
+    color: inherit
+  }
+
+  .footer-above a:hover {
+    color: #fff !important
+  }
+
+  .footer-below {
+    background: #111;
+    padding: 10px 0;
+    color: #eee;
+    text-align: center;
+    font-size: 12px
+  }
+
+  #mainNav {
+    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
+  }
+
+
+
+  #mainNav .navbar-nav .nav-item .nav-link {
+    padding: 1.1em 1em !important;
+  }
+
+  #mainNav {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #212529;
+  }
+
+  #mainNav .navbar-brand {
+    font-size: 1.25em;
+    padding: 12px 0;
+  }
+
+  .dropdown-divider {
+    margin: 0 !important;
+  }
+
+  .dropdown-item {
+    padding: .60rem 1.5rem;
+  }
+
+  .dropdown-menu {
+    padding: 0 !important;
+  }
+
+  .jumbotron {
+    margin: 0px;
+    padding: 0px;
+    height: 300px;
+    margin-bottom: 20px;
+    background: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+
+  blockquote {
+    border-left: none
+  }
+
+  .quote-badge {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .quote-box {
+
+    overflow: hidden;
+    margin-top: -50px;
+    padding-top: -100px;
+    background-color: #343a40;
+    margin-top: 5rem;
+    color: white;
+
+  }
+
+  .quotation-mark {
+
+    margin-top: -10px;
+    font-weight: bold;
+    font-size: 100px;
+    color: white;
+    font-family: "Times New Roman", Georgia, Serif;
+
+  }
+
+  .quote-text {
+    font-size: 19px;
+    margin-top: -65px;
+  }
+</style>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <!-- <a class="menu-toggle rounded" href="#">
+    <i class="fas fa-bars"></i>
+  </a> -->
+  <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top" style="width: 100%!important">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger active" href="index.html" title="UPstudy"><b>UPstudy</b></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#services">SOBRE</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link normal dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+              aria-haspopup="true" aria-expanded="false" title="Serviços Fátima">SERVIÇOS</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="explicacoes_indiv.html" title="Explicações Individuais">Explicações Individuais</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="explicacoes_grupo.html" title="Explicações em grupo">Explicações em grupo</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="acompanhamento.html" title="Acompanhamento Escolar">Acompanhamento Escolar</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="linguas.html" title="Línguas divertidas">Línguas divertidas</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="mindfulness.html" title="Mindfulness">Mindfulness</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="moodle.html" title="Plataforma Moodle UPstudy!a">Plataforma Moodle UPstudy!</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="trabalhos.html" title="Apoio na execução de trabalhos">Apoio na execução de
+                trabalhos</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="transporte.html" title="Opção transporte">Opção transporte</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="parcerias.html" title="Parcerias e vantagens">Parcerias e vantagens</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger normal" href="#parcerias" title="Parcerias Fátima">PARCERIAS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger normal" href="#contact" title="Contactos Fátima">ENCONTRA-NOS</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="jumbotron"
+    style="height: 400px;background-image: url('img/estudo_grupo1.jpg');border-radius: 0!important;margin-bottom: 0!important">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1
+            style="margin-top: 16rem;background-color: #212529; padding-bottom: 3rem;padding-top: 3rem;padding-left: 3rem;padding-right: 3rem;text-align: center;"
+            class="page-header shadow mtop30 mb30 text-white">
+            Explicações em grupo
+          </h1>
+        </div>
+      </div> <!-- ./row -->
+    </div> <!-- ./container -->
+  </div>
+
+
+
+  <!-- Content -->
+  <section class="content-section text-white text-center" id="content" style="background-color:white;padding-top: 5rem">
+    <div class="container" style="padding-left: 6rem;padding-right:6rem">
+      <div class="content-section-heading">
+        <h2 style="color: #212529" class="mb-5">Aprendizagem coletiva</h2>
+      </div>
+      <div style="color: #212529">
+        Ideal para alunos da mesma turma e ano, <b>favorecendo a relação e a interajuda</b> entre ambos os alunos, com o apoio
+        do explicador.<br><br>
+        Nas explicações, os alunos podem <b>superar as suas dificuldades, desenvolver métodos de estudo, esclarecer as suas
+        dúvidas e preparar os testes e exames</b>, sob a orientação de um professor especializado na disciplina em questão.<br><br>
+        As explicações em grupo são realizadas desde o <b>1.º ciclo até ao Ensino Secundário</b>.
+      </div>
+      <blockquote class="quote-box">
+        <p class="quotation-mark">
+          “
+        </p>
+        <p class="quote-text">
+          O único lugar onde o sucesso vem antes do trabalho é no dicionário.
+        </p>
+        <hr>
+        <div class="blog-post-actions">
+          <p class="blog-post-bottom pull-left">
+            Albert Einstein
+          </p>
+        </div>
+      </blockquote>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="footer-above">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-5 col-sm-4 mb30">
+            <a class="js-scroll-trigger" href="#head">
+              <img src="img/new_logo2.svg" width="230" alt="Clínica Contigo">
+            </a>
+            <p class="mtop30">
+              <a href="#services" class="mb15 pl5 pr10 js-scroll-trigger">SOBRE</a> ·
+              <a href="#" class="mb15 pl5 pr10 js-scroll-trigger">SERVIÇOS</a> ·
+              <a href="#parcerias" class="mb15 pl5 pr10 js-scroll-trigger">PARCERIAS</a> ·
+              <a href="#contact" class="mb15 pl5 pr10 js-scroll-trigger">CONTACTOS</a>
+            </p>
+          </div>
+          <div class="col-xs-12 col-sm-4 col-md-4  mb30">
+            <h4 class="fsize16 text-uppercase mb20 fw500">Onde Estamos</h4>
+            <span class="fw600">UPstudy - Salas de Estudo</span> <br>
+            Av. D. José Alves Correia da Silva, 202, Ed. Sinai, Piso 1, Loja 4<br>
+            2495-402 Fátima <br>
+            <p class="mtop20"><a
+                href="https://www.google.pt/maps/dir//UPstudy+-+Salas+de+estudo,+Loja+4,+F%C3%A1tima/@39.6273867,-8.7095155,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0xd189d3b232ad757:0x8848937355adc014!2m2!1d-8.674496!2d39.627392!3e0"
+                class="c-white" target="_blank">Obter Direções <i class="fa fa-map-marker" aria-hidden="true"></i></a>
+            </p>
+          </div>
+          <div class="col-xs-12 col-sm-4 col-md-3 mb30">
+            <h4 class="fsize16 text-uppercase mb20 fw500">Como contactar-nos</h4>
+            <i class="fa fa-phone pr10" aria-hidden="true"></i> 918 141 555 <br>
+            <i class="fa fa-phone pr10" aria-hidden="true"></i> 915 069 002 <br>
+            <i class="fa fa-phone pr10" aria-hidden="true"></i> 249 153 481 <br>
+            <a href="mailto:geral@upstudy.pt"><i class="fa fa-envelope pr10" aria-hidden="true"></i>
+              geral@upstudy.pt</a> <br>
+            <a href="https://www.facebook.com/upstudyfatima/" target="_blank"><i class="fa fa-facebook-official pr10 "
+                aria-hidden="true" title="Siga-nos no Facebook"></i> /upstudyfatima</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-below">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            © 2019 - Todos os direitos reservados. UPstudy
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer -->
+  <!-- <footer class="footer text-center">
+    <div class="container">
+      <ul class="list-inline mb-5">
+        <li class="list-inline-item">
+          <a class="social-link rounded-circle text-white mr-3" href="#">
+            <i class="icon-social-facebook"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="social-link rounded-circle text-white mr-3" href="#">
+            <i class="icon-social-instagram"></i>
+          </a>
+        </li>
+      </ul>
+      <script type="text/javascript" src="https://freehitcounters.org/count/26hl"></script><br>
+      <a href='http://www.counter-zaehler.de'>counterservice</a>
+      <script type='text/javascript'
+        src='https://whomania.com/ctr?id=716d98241f98baf3063dcebdb74a509eafe43a99'></script>
+      <p class="text-muted small mb-0">Copyright &copy; UPstudy 2019</p>
+    </div>
+  </footer> -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/stylish-portfolio.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+
+
+
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/additional-methods.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
+
+  <script type="text/javascript">
+
+    (function () {
+      'use strict';
+      window.addEventListener('load', function () {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function (form) {
+          form.addEventListener('submit', function (event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+    $(document).ready(function () {
+      $('.customer-logos').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 4
+          }
+        }, {
+          breakpoint: 520,
+          settings: {
+            slidesToShow: 3
+          }
+        }]
+      });
+    });
+  </script>
+</body>
+
+</html>
