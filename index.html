@@ -198,23 +198,28 @@
     text-align: center;
     font-size: 12px
   }
+
   #mainNav {
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
     transition: padding-top 0.3s, padding-bottom 0.3s;
   }
+
   #mainNav .navbar-brand {
     font-size: 1.75em;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
+
   #mainNav .navbar-nav .nav-item .nav-link {
     padding: 1.1em 1em !important;
   }
+
   #mainNav.navbar-shrink {
     padding-top: 0;
     padding-bottom: 0;
     background-color: #212529;
   }
+
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
     padding: 12px 0;
@@ -225,29 +230,58 @@
     padding-bottom: 0;
     background-color: #212529;
   }
+
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
     padding: 12px 0;
   }
 
-  .dropdown-divider{
-    margin: 0!important;
+  .dropdown-divider {
+    margin: 0 !important;
   }
 
-  .dropdown-item{
+  .dropdown-item {
     padding: .60rem 1.5rem;
   }
-  .dropdown-menu{
-    padding: 0!important;
+
+  .dropdown-menu {
+    padding: 0 !important;
+  }
+
+  .zoom {
+    transition: transform .2s;
+  }
+
+  .zoom:hover {
+    transform: scale(1.1);
+  }
+
+  .jumbotron {
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 20px;
+    background: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+
+  .postit {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    padding-left: 70px;
+    padding-right: 70px;
   }
 </style>
 
 <body id="page-top">
 
   <!-- Navigation -->
-  <!-- <a class="menu-toggle rounded" href="#">
-    <i class="fas fa-bars"></i>
-  </a> -->
   <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top" style="width: 100%!important">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger active" href="#head" title="UPstudy"><b>UPstudy</b></a>
@@ -258,23 +292,27 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services">SOBRE</a>
+            <a class="nav-link js-scroll-trigger" href="#head">HOME</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link normal dropdown-toggle" data-toggle="dropdown" href="#" role="button"
               aria-haspopup="true" aria-expanded="false" title="Serviços Fátima">SERVIÇOS</a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="explicacoes_indiv.html" title="Explicações Individuais">Explicações Individuais</a>
+              <a class="dropdown-item" href="explicacoes_indiv.html" title="Explicações Individuais">Explicações
+                Individuais</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="explicacoes_grupo.html" title="Explicações em grupo">Explicações em grupo</a>
+              <a class="dropdown-item" href="explicacoes_grupo.html" title="Explicações em grupo">Explicações em
+                grupo</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="acompanhamento.html" title="Acompanhamento Escolar">Acompanhamento Escolar</a>
+              <a class="dropdown-item" href="acompanhamento.html" title="Acompanhamento Escolar">Acompanhamento
+                Escolar</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="linguas.html" title="Línguas divertidas">Línguas divertidas</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="mindfulness.html" title="Mindfulness">Mindfulness</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="moodle.html" title="Plataforma Moodle UPstudy!a">Plataforma Moodle UPstudy!</a>
+              <a class="dropdown-item" href="moodle.html" title="Plataforma Moodle UPstudy!a">Plataforma Moodle
+                UPstudy!</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="trabalhos.html" title="Apoio na execução de trabalhos">Apoio na execução de
                 trabalhos</a>
@@ -288,6 +326,9 @@
             <a class="nav-link js-scroll-trigger normal" href="#parcerias" title="Parcerias Fátima">PARCERIAS</a>
           </li>
           <li class="nav-item">
+              <a class="nav-link js-scroll-trigger normal" href="#form" title="Parcerias Fátima">INSCREVE-TE</a>
+            </li>
+          <li class="nav-item">
             <a class="nav-link js-scroll-trigger normal" href="#contact" title="Contactos Fátima">ENCONTRA-NOS</a>
           </li>
         </ul>
@@ -296,7 +337,7 @@
   </nav>
 
   <!-- Header -->
-  <header class="masthead d-flex" id="head">
+  <header class="masthead d-flex" id="head" >
     <div class="container text-left my-auto">
       <img class="responsive" src="img/new_logo2.svg">
       <h3 class="mb-5 text-white" style="padding-left: 20px">
@@ -310,10 +351,70 @@
 
 
   <!-- Services -->
+  
   <section class="content-section text-white text-center" id="services"
-    style="background-color:#28a745;padding-bottom: 0px">
+    style="background-color:#f8f9fa;padding-bottom: 0">
     <div class="container">
-      <div class="content-section-heading">
+        <div class="container text-center">
+            <div class="content-section-heading">
+              <h2 class="mb-5" style="color: #212529">O que oferecemos?</h2>
+            </div>
+          </div>
+      <div class="row shadow" style="background-image: url(img/cork_board.jpg);border-style: solid;border-width: 0.7rem;border-color: #edd48a;">
+
+        <div id="postit1" class="postit col-lg-4 col-md-4 col-sm-12 zoom"
+          style="background-image: url('img/postit.png');">
+          <a href="explicacoes_indiv.html"
+            style="color:#212529;font-size:1.5rem;font-weight:bold;transform: rotate(-2deg);">Explicações
+            individuais</a>
+        </div>
+
+        <div id="postit2" class="postit col-lg-4 col-md-4 col-sm-12 zoom"
+          style="background-image: url('img/postit1.png')">
+          <a href="explicacoes_grupo.html"
+            style="color:#212529;font-size:1.5rem;font-weight:bold;transform: rotate(2deg);">Explicações em grupo</a>
+        </div>
+        <div id="postit3" class="postit col-lg-4 col-md-4 col-sm-12 zoom"
+          style="background-image: url('img/postit2.png')">
+          <a href="acompanhamento.html"
+            style="color:#212529;font-size:1.5rem;font-weight:bold;transform: rotate(-2deg);">Acompanhamento escolar</a>
+        </div>
+        <div id="postit4" class="postit col-lg-4 col-md-4 col-sm-12 zoom"
+          style="background-image: url('img/postit3.png')">
+          <a href="linguas.html"
+            style="color:#212529;font-size:1.5rem;font-weight:bold;transform: rotate(2deg);">Línguas divertidas</a>
+        </div>
+        <div id="postit5" class="postit col-lg-4 col-md-4 col-sm-12 zoom"
+          style="background-image: url('img/postit4.png')">
+          <a href="mindfulness.html"
+            style="color:#212529;font-size:1.5rem;font-weight:bold;transform: rotate(-4.5deg);">Mindfulness</a>
+        </div>
+        <div id="postit6" class="postit col-lg-4 col-md-4 col-sm-12 zoom"
+          style="background-image: url('img/postit.png')">
+          <a href="moodle.html"
+            style="color:#212529;font-size:1.5rem;font-weight:bold;transform: rotate(-2deg);">Plataforma Moodle
+            UPstudy!</a>
+        </div>
+        <div id="postit7" class="postit col-lg-4 col-md-4 col-sm-12 zoom"
+          style="background-image: url('img/postit1.png')">
+          <a href="trabalhos.html"
+            style="color:#212529;font-size:1.5rem;font-weight:bold;transform: rotate(2deg);">Apoio na execução de
+            trabalhos</a>
+        </div>
+        <div id="postit8" class="postit col-lg-4 col-md-4 col-sm-12 zoom"
+          style="background-image: url('img/postit2.png')">
+          <a href="transporte.html"
+            style="color:#212529;font-size:1.5rem;font-weight:bold;transform: rotate(-2deg);">Opção Transporte</a>
+        </div>
+        <div id="postit9" class="postit col-lg-4 col-md-4 col-sm-12 zoom"
+          style="background-image: url('img/postit3.png')">
+          <a href="parcerias.html"
+            style="color:#212529;font-size:1.5rem;font-weight:bold;transform: rotate(2deg);">Parcerias e vantagens</a>
+        </div>
+      </div>
+
+
+      <!-- <div class="content-section-heading">
         <h2 class="mb-5">O que oferecemos?</h2>
       </div>
       <div class="row">
@@ -381,7 +482,7 @@
       <div class="row">
         <div class="col-lg-12 col-md-12 mb-5 mb-lg-0" style="margin-top: 70px;margin-bottom:100px!important"><a
             class="btn btn-primary btn-xl js-scroll-trigger" href="#about">E mais!</a></div>
-      </div>
+      </div> -->
     </div>
   </section>
 
@@ -454,21 +555,22 @@
 
   <!-- Parcerias -->
   <section class="content-section" id="parcerias">
-    <div class="container">
+    <div class="container col-lg-8 col-md-10 col-sm-10">
       <div class="content-section-heading">
         <h2 class="mb-5">Parcerias e vantagens</h2>
       </div>
-      <section class="customer-logos slider">
-        <div class="slide"><img data-toggle="modal" data-target="#modal1" style="cursor: pointer"
-            src="img/partner_1.jpg">
+      <div class="table" style="margin-top:3rem">
+        <div class="row">
+          <img class="col-lg-3 col-md-6 col-sm-12 zoom" data-toggle="modal" data-target="#modal1"
+            style="cursor: pointer" src="img/partner_1.jpg">
+          <img class="col-lg-3 col-md-6 col-sm-12 zoom" data-toggle="modal" data-target="#modal2"
+            style="cursor: pointer" src="img/partner_2.jpg">
+          <img class="col-lg-3 col-md-6 col-sm-12 zoom" data-toggle="modal" data-target="#modal3"
+            style="cursor: pointer" src="img/partner_3.jpg">
+          <img class="col-lg-3 col-md-6 col-sm-12 zoom" data-toggle="modal" data-target="#modal4"
+            style="cursor: pointer" src="img/partner_4.jpg">
         </div>
-        <div class="slide"><img data-toggle="modal" data-target="#modal2" style="cursor: pointer"
-            src="img/partner_2.jpg"></div>
-        <div class="slide"><img data-toggle="modal" data-target="#modal3" style="cursor: pointer"
-            src="img/partner_3.jpg"></div>
-        <div class="slide"><img data-toggle="modal" data-target="#modal4" style="cursor: pointer"
-            src="img/partner_4.jpg"></div>
-      </section>
+      </div>
     </div>
   </section>
 
@@ -623,99 +725,105 @@
   </section> -->
 
 
-  <section class="content-section" id="form" style="background-color:#28a745">
-    <div class="container text-center">
-      <div class="card">
-        <div class="content-section-heading">
-          <h2 class="">Reserva de Inscrição</h2>
-          <p>Efetua a tua inscrição para o próximo ano letivo e garante a tua vaga no UPstudy!
-            Também podes utilizar o formulário para pedir informações.</p>
-        </div>
-        <div class="card-body" style="padding-right: 50px;padding-left:50px">
-          <form class="needs-validation" action="https://formspree.io/geral@upstudy.pt" method="POST" novalidate>
-            <input type="hidden" name="_subject" value="Nova inscrição no UPstudy!" />
-            <div class="form-group required">
-              <label class="control-label sr-only" for="Nome">Nome</label>
-              <input type="text" class="form-control" id="Nome" name="Nome" placeholder="Nome" required />
-            </div>
-            <div class="form-group required">
-              <label class="control-label sr-only" for="Sou...">Sou...</label>
-              <select class="form-control" id="Sou..." name="É" required>
-                <option selected value="">Sou...</option>
-                <option value="Aluno">Aluno</option>
-                <option value="Pai/Mãe de um aluno">Pai/Mãe de um aluno</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="control-label sr-only" for="Localidade">Localidade:</label>
-              <select class="form-control" id="Localidade" name="Localidade" required>
-                <option value="Fátima">Fátima</option>
-              </select>
-            </div>
-            <div class="form-group required">
-              <label class="control-label sr-only" for="nome_aluno">Nome aluno(a):</label>
-              <input type="text" class="form-control" id="nome_aluno" name="Nome aluno" placeholder="Nome aluno(a)"
-                data-rule-required="true" data-msg-required="Este campo é obrigatório." required />
-            </div>
-            <div class="form-group required">
-              <label class="control-label sr-only" for="Email">Email</label>
-              <input type="email" class="form-control" id="Email" name="Email" placeholder="Email" required />
-            </div>
-            <div class="form-group required">
-              <label class="control-label sr-only" for="Telemovel">Telemóvel:</label>
-              <div class="input-group"><span class="input-group-addon left"><i class="glyphicon glyphicon-earphone"></i>
-                </span>
-                <input type="tel" class="form-control phonelib" id="Telemovel" name="Telemovel" placeholder="Telemóvel"
-                  required />
+  <section class="content-section" id="form" style="padding:0;overflow: hidden;padding-top: 59.2px">
+    <div class="row">
+      <div class="jumbotron col-lg-6 col-md-12 col-sm-12"
+        style="background-image: url('img/reserva.JPG');border-radius: 0!important;margin-bottom: 0!important">
+      </div>
+      <div class="container text-center col-lg-6 col-md-12 col-sm-12" style="padding: 0">
+        <div class="card" style="border-radius: 0;border-style: none">
+          <div class="content-section-heading">
+            <h2 class="">Reserva de Inscrição</h2>
+            <p>Efetua a tua inscrição para o próximo ano letivo e garante a tua vaga no UPstudy!
+              Também podes utilizar o formulário para pedir informações.</p>
+          </div>
+          <div class="card-body" style="padding-right: 50px;padding-left:50px">
+            <form class="needs-validation" action="https://formspree.io/geral@upstudy.pt" method="POST" novalidate>
+              <input type="hidden" name="_subject" value="Nova inscrição no UPstudy!" />
+              <div class="form-group required">
+                <label class="control-label sr-only" for="Nome">Nome</label>
+                <input type="text" class="form-control" id="Nome" name="Nome" placeholder="Nome" required />
               </div>
-            </div>
-            <div class="form-group">
-              <label class="control-label sr-only" for="como_nos_conheceu">Como nos conheceu?</label>
-              <select class="form-control" id="como_nos_conheceu" name="Como nos conheceu" required>
-                <option selected value="">Como nos conheceu?</option>
-                <option value="Anúncio Google">Anúncio Google</option>
-                <option value="Anúncio Facebook/Instagram">Anúncio Facebook/Instagram</option>
-                <option value="Por um amigo">Por um amigo</option>
-                <option value="Internet">Internet</option>
-                <option value="Flyers">Flyers</option>
-                <option value="Não me recordo">Não me recordo</option>
-              </select>
-            </div>
-            <div class="form-group required">
-              <label class="control-label sr-only" for="Ano">Ano de escolaridade</label>
-              <select class="form-control" id="Ano" name="Ano" required>
-                <option value="">Ano de escolaridade</option>
-                <option value="1º ano">1º ano</option>
-                <option value="2º ano">2º ano</option>
-                <option value="3º ano">3º ano</option>
-                <option value="4º ano">4º ano</option>
-                <option value="5º ano">5º ano</option>
-                <option value="6º ano">6º ano</option>
-                <option value="7º ano">7º ano</option>
-                <option value="8º ano">8º ano</option>
-                <option value="9º ano">9º ano</option>
-                <option value="10º ano">10º ano</option>
-                <option value="11º ano">11º ano</option>
-                <option value="12º ano">12º ano</option>
-                <option value="Ensino superior">Ensino superior</option>
-                <option value="Outros">Outros</option>
-              </select>
-            </div>
-            <div class="form-group required">
-              <label class="control-label sr-only" for="Dsiciplinas">Disciplina(s) / Serviço(s)</label>
-              <input type="text" class="form-control" id="Disciplinas" name="Disciplinas"
-                placeholder="Disciplina(s) / Serviço(s)" required />
-            </div>
-            <div class="form-group">
-              <label class="control-label sr-only" for="Obs">Observações</label>
-              <input type="text" class="form-control" id="Obs" name="Observações" placeholder="Observações" />
-            </div>
-            <div class="form-group submit" style="position: relative;">
-              <button type="submit" class="btn btn-primary btn-lg" style="z-index: 1;">
-                Enviar
-              </button>
-            </div>
-          </form>
+              <div class="form-group required">
+                <label class="control-label sr-only" for="Sou...">Sou...</label>
+                <select class="form-control" id="Sou..." name="É" required>
+                  <option selected value="">Sou...</option>
+                  <option value="Aluno">Aluno</option>
+                  <option value="Pai/Mãe de um aluno">Pai/Mãe de um aluno</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="control-label sr-only" for="Localidade">Localidade:</label>
+                <select class="form-control" id="Localidade" name="Localidade" required>
+                  <option value="Fátima">Fátima</option>
+                </select>
+              </div>
+              <div class="form-group required">
+                <label class="control-label sr-only" for="nome_aluno">Nome aluno(a):</label>
+                <input type="text" class="form-control" id="nome_aluno" name="Nome aluno" placeholder="Nome aluno(a)"
+                  data-rule-required="true" data-msg-required="Este campo é obrigatório." required />
+              </div>
+              <div class="form-group required">
+                <label class="control-label sr-only" for="Email">Email</label>
+                <input type="email" class="form-control" id="Email" name="Email" placeholder="Email" required />
+              </div>
+              <div class="form-group required">
+                <label class="control-label sr-only" for="Telemovel">Telemóvel:</label>
+                <div class="input-group"><span class="input-group-addon left"><i
+                      class="glyphicon glyphicon-earphone"></i>
+                  </span>
+                  <input type="tel" class="form-control phonelib" id="Telemovel" name="Telemovel"
+                    placeholder="Telemóvel" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label sr-only" for="como_nos_conheceu">Como nos conheceu?</label>
+                <select class="form-control" id="como_nos_conheceu" name="Como nos conheceu" required>
+                  <option selected value="">Como nos conheceu?</option>
+                  <option value="Anúncio Google">Anúncio Google</option>
+                  <option value="Anúncio Facebook/Instagram">Anúncio Facebook/Instagram</option>
+                  <option value="Por um amigo">Por um amigo</option>
+                  <option value="Internet">Internet</option>
+                  <option value="Flyers">Flyers</option>
+                  <option value="Não me recordo">Não me recordo</option>
+                </select>
+              </div>
+              <div class="form-group required">
+                <label class="control-label sr-only" for="Ano">Ano de escolaridade</label>
+                <select class="form-control" id="Ano" name="Ano" required>
+                  <option value="">Ano de escolaridade</option>
+                  <option value="1º ano">1º ano</option>
+                  <option value="2º ano">2º ano</option>
+                  <option value="3º ano">3º ano</option>
+                  <option value="4º ano">4º ano</option>
+                  <option value="5º ano">5º ano</option>
+                  <option value="6º ano">6º ano</option>
+                  <option value="7º ano">7º ano</option>
+                  <option value="8º ano">8º ano</option>
+                  <option value="9º ano">9º ano</option>
+                  <option value="10º ano">10º ano</option>
+                  <option value="11º ano">11º ano</option>
+                  <option value="12º ano">12º ano</option>
+                  <option value="Ensino superior">Ensino superior</option>
+                  <option value="Outros">Outros</option>
+                </select>
+              </div>
+              <div class="form-group required">
+                <label class="control-label sr-only" for="Dsiciplinas">Disciplina(s) / Serviço(s)</label>
+                <input type="text" class="form-control" id="Disciplinas" name="Disciplinas"
+                  placeholder="Disciplina(s) / Serviço(s)" required />
+              </div>
+              <div class="form-group">
+                <label class="control-label sr-only" for="Obs">Observações</label>
+                <input type="text" class="form-control" id="Obs" name="Observações" placeholder="Observações" />
+              </div>
+              <div class="form-group submit" style="position: relative;">
+                <button type="submit" class="btn btn-primary btn-lg" style="z-index: 1;">
+                  Enviar
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -836,6 +944,18 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
 
   <script type="text/javascript">
+    $(window).resize(function () {
+      $('.postit').each(function (i, obj) {
+        var e_width = $(obj).css("width");
+        console.log(e_width);
+        e_width = e_width.slice(0, -2);
+        e_width = parseFloat(e_width);
+        var e_height = e_width * 0.866667;
+        e_height = e_height + "px";
+        $(obj).css("height", e_height);
+      });
+    });
+
     var navbarCollapse = function () {
       if ($("#mainNav").offset().top > 100) {
         $("#mainNav").addClass("navbar-shrink");
@@ -865,6 +985,15 @@
       }, false);
     })();
     $(document).ready(function () {
+      $('.postit').each(function (i, obj) {
+        var e_width = $(obj).css("width");
+        console.log(e_width);
+        e_width = e_width.slice(0, -2);
+        e_width = parseFloat(e_width);
+        var e_height = e_width * 0.866667;
+        e_height = e_height + "px";
+        $(obj).css("height", e_height);
+      });
       $('.customer-logos').slick({
         slidesToShow: 6,
         slidesToScroll: 1,
